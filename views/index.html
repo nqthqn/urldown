@@ -1,6 +1,17 @@
 <html>
 <head>
-<title>Early Birds</title>
+<title>DODONE</title>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="bower_components/trianglify/trianglify.js"></script>
+<script>
+
+	var t = new Trianglify();
+	var pattern = t.generate(document.body.clientWidth, document.body.clientHeight);
+	document.body.setAttribute('style', 'background-image: '+pattern.dataUrl);
+
+</script>
+
 <style>
 
 body{
@@ -17,7 +28,10 @@ font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", He
 
 <body>
 
-<h1>You only get {{ max_downloads }} downloads. Buy it <a href='howp.bandcamp.com'>here</a>.</h1>
+<h1>DO.</h1>
+<h1>DONE.</h1>
+<br><br>
 
+<h1>{{ ip }}</h1>
 </body>
 </html>

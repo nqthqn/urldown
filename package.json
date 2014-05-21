@@ -12,7 +12,8 @@
     "hapi": "~5.0.0",
     "redis": "~0.10.2",
     "simple-ansi": "0.0.1",
-    "handlebars": "~2.0.0-alpha.2"
+    "handlebars": "~2.0.0-alpha.2",
+    "poet": "~1.0.2"
   },
   "devDependencies": {
     "grunt": "~0.4.5"

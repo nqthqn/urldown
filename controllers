@@ -1,0 +1,30 @@
+
+function homepage(request, reply) {
+	reply.view("index", {
+		ip:request.raw.req.connection.remoteAddress
+	});
+}
+
+function downloadable(request, reply) {
+	redisClient.get(request.params.token,function(err, tokenval) {
+  
+		if(tokenval && tokenval < max_downloads){
+			
+			var options = {
+				filename:'A-Letter.zip',
+			}
+			reply.file('./deliverables/letter.zip', options)
+			// NOSQL!
+			redisClient.incr(request.params.token);
+
+		} else {
+			reply.view("downloads", {
+				max_downloads: max_downloads,
+				css_status: 'red',
+				token: request.params.token,
+				tokenval: tokenval
+			});
+		}
+
+	});
+}
