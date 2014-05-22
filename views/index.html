@@ -1,37 +1,78 @@
 <html>
 <head>
 <title>DODONE</title>
+<!-- Basic Page Needs
+  ================================================== -->
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Mobile Specific Metas
+  ================================================== -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <!-- CSS
+  ================================================== -->
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/skeleton.css">
+        <link rel="stylesheet" href="css/layout.css">
+
+        <!--[if lt IE 9]>
+                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+<link rel="stylesheet" href="css/font-awesome.min.css">
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="bower_components/trianglify/trianglify.js"></script>
-<script>
+<script src="scripts/trianglify.min.js"></script>
+<style>
+.share{
+	padding:10px;
+	color:white;
+	background:#eb512e;
+	float:right;
+}
+a, a:hover, a:active, a:visited { color: white; }
+</style>
 
-	var t = new Trianglify();
+</head>
+
+<body>
+
+
+
+<div class="container">
+	<div class="sixteen columns omega">
+		<a href='#' class='share'>share</a>
+ 
+		<a href='#' style='padding:10px; float:right;'><i class="fa fa-cog fa-fw"></i></a>
+	</div>
+	<div class="six columns omega">
+		<h1>DO.</h1>
+		<ul>
+			<li><input placeholder='What needs doing?' type='text'></input></li>
+			<li>Make this app</li>
+			<li>Learn asynchronous callbacks</li>
+		
+		</ul>
+	</div>
+	<div class="six columns omega">
+		<h1>DONE.</h1>
+		<ul>
+			<li>Learn a little node  <i class="fa fa-comment"></i></li>
+		</ul>
+	</div>
+</div>
+
+
+
+
+<script type="text/javascript">
+
+	var t = new Trianglify({noiseIntensity:0,cellsize:100,x_gradient:['#eb512e','#f5cf4b','#e09e5e']});
 	var pattern = t.generate(document.body.clientWidth, document.body.clientHeight);
 	document.body.setAttribute('style', 'background-image: '+pattern.dataUrl);
 
 </script>
 
-<style>
-
-body{
-background:black;
-color:white;
-margin:50px;
-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   font-weight: 300;
-}
-
-
-</style>
-</head>
-
-<body>
-
-<h1>DO.</h1>
-<h1>DONE.</h1>
-<br><br>
-
-<h1>{{ ip }}</h1>
 </body>
 </html>
