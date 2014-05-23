@@ -25,6 +25,9 @@
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="scripts/trianglify.min.js"></script>
 <style>
+hr { display: block; height: 1px;
+    border: 0; border-top: 1px solid #000;
+    margin: 1em 0; padding: 0; }
 .share{
 	padding:10px;
 	color:white;
@@ -44,23 +47,30 @@ a, a:hover, a:active, a:visited { color: white; }
 	<div class="sixteen columns omega">
 		<a href='#' class='share'>share</a>
  
-		<a href='#' style='padding:10px; float:right;'><i class="fa fa-cog fa-fw"></i></a>
+		<a href='#' style='padding:8px; float:right;'><i class="fa fa-cog fa-2x"></i></a>
 	</div>
 	<div class="six columns omega">
 		<h1>DO.</h1>
 		<ul>
 			<li><input placeholder='What needs doing?' type='text'></input></li>
-			<li>Make this app</li>
-			<li>Learn asynchronous callbacks</li>
+			<li>Make this app  <i class='fa fa-arrow-right'></i></li>
+			<li>Learn asynchronous callbacks <i class='fa fa-arrow-right'></i> </li>
+			<li><i class="fa fa-comment"></i>  This task has feedback <i class='fa fa-arrow-right'></i> </li>
 		
 		</ul>
 	</div>
 	<div class="six columns omega">
 		<h1>DONE.</h1>
 		<ul>
-			<li>Learn a little node  <i class="fa fa-comment"></i></li>
+			<li> <i class='fa fa-arrow-left'></i> Learn a little node  <i class="fa fa-comment"></i></li>
 		</ul>
 	</div>
+	<div class="sixteen columns omega">
+		<hr>
+<strong>What?!</strong><br>
+<p>Dodone is a feedback loop. It is a little app that allows you to make quick todo lists. If you chose to share your list, your friend can comment on items that you have completed. All the items are stored locally until you click 'share'. You will then be given a unique link and everything will save server side automatically.</p>
+<p> <strong>THIS IS JUST A DEMO. IT DOES NOT WORK YET. </strong> </p>
+
 </div>
 
 
